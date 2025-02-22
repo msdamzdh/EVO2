@@ -11,7 +11,6 @@ ARC-EVO2-40B/
 │       └── gen_seq.py
 ├── .dockerignore
 ├── .env
-├── .env-dev
 ├── .gitignore
 ├── Dockerfile
 ├── main.py
@@ -39,7 +38,7 @@ This API service provides an interface for sequence generation using NVIDIA's ba
 
 ## Environment Variables
 
-Create a `.env-dev` file with the following variables:
+Create a `.env` file with the following variables:
 ```
 URL=your_host_url
 PORT=your_port_number
@@ -104,7 +103,7 @@ docker docker build -t <Image name >:<Tag > .
 
 Run the container:
 ```bash
-docker run --env-file .env-dev --name <Your desired name > -d -p <Local Port >:<ContainerPort> evo2:v1.0.0
+docker run --env-file .env --name <Your desired name > -d -p <Local Port >:<ContainerPort> evo2:v1.0.0
 ```
 
 ## API Parameters
